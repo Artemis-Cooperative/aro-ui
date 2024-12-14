@@ -12,7 +12,6 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-styling",
     // Consider adding these useful addons:
-    // "@storybook/addon-a11y",  // for accessibility testing
     // "@storybook/addon-viewport", // for responsive design testing
   ],
 
