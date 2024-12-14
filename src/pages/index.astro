@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Aro Design System">
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <h1 class="text-3xl font-bold mb-6">Aro Design System</h1>
+    
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Components</h2>
+      <div class="grid gap-4">
+        <a 
+          href="/components/button" 
+          class="p-4 rounded-lg border border-border hover:border-primary transition-colors"
+        >
+          <h3 class="text-xl font-medium mb-2">Button</h3>
+          <p class="text-text-secondary">
+            A versatile button component with multiple variants, sizes, and states.
+          </p>
+        </a>
+        <!-- Add more component links here as they are created -->
+      </div>
+    </section>
+  </main>
 </Layout>

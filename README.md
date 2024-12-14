@@ -1,48 +1,57 @@
-# Astro Starter Kit: Basics
+# Aro UI: A UI Component Library for Aro
 
-```sh
-npm create astro@latest -- --template basics
-```
+Aro UI is a design system and component library built for the Aro developer framework. It aims to provide a performant, reusable, and well-documented set of UI components.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Key Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+* **Component-Based Architecture:** Aro UI is built around reusable, independent components, promoting modularity and maintainability.
+* **Tailwind CSS Styling:**  Utilizes Tailwind CSS for rapid and consistent styling, offering a vast array of customizable utility classes.
+* **TypeScript Support:**  Provides robust type safety throughout the library, improving code quality and reducing errors.
+* **Storybook Integration:**  Thorough documentation and interactive component examples are available through Storybook. This makes exploring and integrating the components easy.
+* **Lit-HTML Templating:** Employs Lit-HTML for efficient and reactive rendering, ensuring optimal performance.
+* **Comprehensive Design System:** Aro UI includes a detailed design system with guidelines for color palettes, spacing, typography, and more, guaranteeing consistent design across your application.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Technology Stack
 
-## 🚀 Project Structure
+Aro UI is built with a powerful combination of technologies:
 
-Inside of your Astro project, you'll see the following folders and files:
+* **Astro:**  The static site generator powering the build process and development server.
+* **Tailwind CSS:**  Provides utility-first CSS classes for rapid and consistent styling.
+* **TypeScript:** Adds static typing for improved code quality and maintainability.
+* **Storybook:** Offers interactive documentation and showcases for the components.
+* **Lit-HTML:** A fast and lightweight library for building reactive web components.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Usage Instructions
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Aro UI is designed to be easily integrated into your Aro projects.  The intended distribution method is via npm.  Follow these steps to get started:
 
-## 🧞 Commands
+1. **Installation:** Install Aro UI as an npm package:
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+   npm install aro-ui
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. **Import Components:** Import and use the desired components in your Astro or other framework components.  For example, to use the Button component:
 
-## 👀 Want to learn more?
+   ```astro
+   ---
+   import { Button } from 'aro-ui'; // Adjust path if necessary
+   ---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   <Button variant="primary">Click Me</Button>
+   ```
+
+3. **Explore Storybook:**  For comprehensive documentation and interactive component examples, access the Storybook documentation (instructions on accessing Storybook should be provided separately, possibly in a different README or within the project files themselves).  This allows you to view available properties, customization options, and usage examples for each component.
+
+## License
+
+see [LICENSE](./LICENSE)
+
+## Getting Started (For Developers)
+
+This section is intended for developers working on Aro UI itself.  To get started, follow these steps:
+
+1. Clone the repository:  `git clone <repository_url>`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Build for production: `npm run build`
