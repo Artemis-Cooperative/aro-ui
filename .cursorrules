@@ -1,0 +1,146 @@
+# Cursor Rules
+
+You are an expert in Astro, Storybook, TypeScript, CSS, ESlint, npm, and modern UI development.
+
+  General Coding Guidelines
+
+- Document code with verbosity, providing clear and detailed comments.
+- Use descriptive names for variables, classes, functions, and files.
+- Update comments when editing files; avoid removing relevant comments.
+- Use comments to separate code into logical sections.
+- Use comments to indicate the purpose of the code.
+- Avoid duplicate code by reusing the same styles and components. There's no need to define the same style or component in multiple places.
+
+  Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples
+- Ensure all code follows TDD (Test Driven Development): write tests first, verify that the tests satisfy the requirements given, then write and iteratively improve the code to pass the tests.
+- Organize files with a logical structure: component files, subcomponents, helpers, static content, and types.
+- Use descriptive, verbose file names that indicate their purpose.
+
+  Documentation References
+
+- Follow Astro's official documentation: <https://docs.astro.build>.
+- Use Storybook's documentation for building and testing UI components: <https://storybook.js.org/docs>.
+- Refer to TypeScript's official documentation for type definitions and practices: <https://www.typescriptlang.org/docs>.
+- Follow CSS specifications and best practices from the MDN documentation: <https://developer.mozilla.org/en-US/docs/Web/CSS>.
+- Use ESLint documentation for linting configuration and rules: <https://eslint.org/docs/latest>.
+- Refer to npm's official documentation for managing dependencies: <https://docs.npmjs.com>.
+- For each dependency, refer to the documentation for the latest version of the dependency. For more specificity, refer to package.json.
+
+  Styling and UI
+
+- Use CSS and Tailwind for styling components; integrate with PostCSS as required.
+- Prioritize responsive design using Astro's built-in capabilities and CSS media queries.
+- Maintain strict WCAG compliance and high accessibility (a11y) standards, including ARIA roles.
+- Follow consistent naming conventions for CSS classes.
+- Make the UI look like Flux UI: <https://fluxui.dev/docs>
+
+  Testing
+
+- Write unit tests for individual components using the Storybook Testing Library.
+- Write integration tests for workflows and key user interactions.
+- Implement test cases before writing any feature code, adhering to TDD.
+- Ensure all test cases are updated when modifying existing functionality.
+
+  Configs
+- TypeScript code should adhere to the tsconfig.json file.
+- Astro code should adhere to the astro.config.ts and types/astro.ts files.
+- CSS code should adhere to the tailwind.config.ts, styles/globals.css, and types/theme.ts files.
+- Storybook code should adhere to the .storybook/main.ts, .storybook/preview.ts, and types/storybook.ts files.
+
+  Tooling
+
+- Configure ESLint for consistent code quality and enforce project rules.
+- Use npm scripts to manage tasks like builds, tests, and deployments.
+- Update Cursor's .cursorrules file dynamically when adding dependencies to the project. For example, if PostCSS is added, include relevant rules and documentation references for their usage.
+- Rely on Astro's and Storybook's tools for development and component visualization.
+
+  Previous Errors To Avoid
+
+- Do not include React in this project. This project uses Astro.
+- Do not include lit or any web component support in this project. This project uses Astro.
+- Do not include JavaScript in this project. This project uses TypeScript.
+- Do not use playwright in this project. This project uses Storybook for testing.
+
+  Key Conventions
+
+  1. Maintain strict TypeScript checking to ensure type safety.
+  2. Use Astro's and Storybook's features to optimize component-driven development.
+  3. Ensure compatibility with modern browsers and performance best practices.
+  4. Test all UI changes for WCAG compliance and accessibility.
+
+  Directory Structure
+
+src/
+├── components/                         # Reusable UI components
+│   └── ComponentName/
+│       ├── ComponentName.astro         # Component implementation
+│       ├── ComponentName.test.ts       # Component tests
+│       └── ComponentName.stories.ts    # Storybook stories
+├── layouts/                            # Page layouts and templates
+├── pages/                              # Astro pages and routing
+├── styles/                             # Global styles and Tailwind configuration
+│   ├── globals.css                     # Global CSS styles
+│   └── themes/                         # Theme-specific styles
+├── types/                              # TypeScript type definitions
+│   ├── astro.ts                        # Astro-specific types
+│   ├── components.ts                   # Component prop types
+│   ├── theme.ts                        # Theme and styling types
+│   └── storybook.ts                    # Storybook configuration types
+├── utils/                              # Shared utilities and helpers
+└── assets/                             # Static assets (images, fonts, etc.)
+
+.storybook/                             # Storybook configuration
+├── main.ts                             # Main Storybook config
+└── preview.ts                          # Preview configuration
+
+  Directory Usage
+
+- components/: Each component should have its own directory containing the component file, tests, and stories. Follow the pattern:
+  - ComponentName.astro - The main component implementation
+  - ComponentName.test.ts - Unit and integration tests
+  - ComponentName.stories.ts - Storybook documentation and examples
+  - index.ts - (optional) For exporting multiple related components
+
+- layouts/: Contains reusable page layouts. Each layout should:
+  - Be a single .astro file
+  - Handle common page elements (header, footer, etc.)
+  - Accept slots for content injection
+  - Support responsive design patterns
+
+- pages/: Contains Astro pages that map to routes. Each page should:
+  - Use appropriate layouts
+  - Handle SEO metadata
+  - Implement page-specific logic
+  - Follow Astro's file-based routing conventions
+
+- styles/: Manages all styling concerns:
+  - globals.css - Contains root variables and reset styles
+  - themes/ - Contains theme-specific variables and overrides
+  - Follow utility-first approach with Tailwind
+  - Keep component-specific styles in their component files
+
+- types/: Contains all TypeScript type definitions:
+  - Organize by domain (components, theme, etc.)
+  - Export reusable types and interfaces
+  - Maintain strict type checking
+  - Document complex types with JSDoc comments
+
+- utils/: Contains shared helper functions:
+  - Group related utilities in separate files
+  - Export named functions (no default exports)
+  - Document with JSDoc comments
+  - Include unit tests for complex utilities
+
+- assets/: Manages static files:
+  - Organize by type (images/, fonts/, etc.)
+  - Use appropriate formats for web (webp, woff2, etc.)
+  - Include source files when needed
+  - Optimize for production
+
+- .storybook/: Configures Storybook:
+  - main.ts - Configure addons and webpack
+  - preview.ts - Set up global decorators and parameters
+  - Follow Storybook best practices
+  - Maintain documentation standards

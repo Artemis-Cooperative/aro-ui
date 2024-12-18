@@ -1,8 +1,8 @@
-import type { Preview } from "@storybook/web-components";
+import type { Preview } from '@storybook/html';
 import type { DesignTokens } from "../types/storybook";
 
 // Import your tailwind CSS
-import "../src/styles/tailwind.css";
+import '../src/styles/tailwind.css';
 
 /**
  * Storybook preview configuration
@@ -529,7 +529,7 @@ const preview: Preview = {
      * Documentation Settings
      * @example
      * // In your component stories:
-     * import type { Meta, StoryObj } from '@storybook/web-components';
+     * import type { Meta, StoryObj } from '@storybook/react';
      *
      * const meta = {
      *   title: 'Components/Button',

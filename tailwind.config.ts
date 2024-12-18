@@ -159,6 +159,8 @@ const config: Config = {
         xl: "2rem",
         "2xl": "2.5rem",
         "3xl": "3rem",
+        "8xl": "96rem",
+        "9xl": "128rem",
       },
 
       /**
@@ -194,6 +196,7 @@ const config: Config = {
         md: "0.75rem",
         lg: "1rem",
         full: "9999px",
+        "4xl": "2rem",
       },
 
       /**
